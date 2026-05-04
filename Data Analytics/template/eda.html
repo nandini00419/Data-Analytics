@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Exploratory Data Analysis{% endblock %}
+
+{% block content %}
+<h1>Exploratory Data Analysis</h1>
+<p>EDA plots:</p>
+{% for image in images %}
+    <h2>{{ image }}</h2>
+    <img src="/Output/{{ image }}" alt="{{ image }}">
+{% endfor %}
+{% endblock %}
+

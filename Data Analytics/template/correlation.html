@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Correlation Analysis{% endblock %}
+
+{% block content %}
+<h1>Correlation Analysis</h1>
+<p>Correlation heatmap:</p>
+{% for image in images %}
+    <h2>{{ image }}</h2>
+    <img src="/Output/{{ image }}" alt="{{ image }}">
+{% endfor %}
+{% endblock %}

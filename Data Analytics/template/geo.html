@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Geospatial Analysis{% endblock %}
+
+{% block content %}
+<h1>Geospatial Analysis</h1>
+<p>Choropleth maps:</p>
+{% for html in htmls %}
+    <h2>{{ html }}</h2>
+    <iframe src="/Output/{{ html }}"></iframe>
+{% endfor %}
+<p>Other geo plots:</p>
+{% for image in images %}
+    <h2>{{ image }}</h2>
+    <img src="/Output/{{ image }}" alt="{{ image }}">
+{% endfor %}
+{% endblock %}

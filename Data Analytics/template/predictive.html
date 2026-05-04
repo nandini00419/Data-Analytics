@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Predictive Analysis{% endblock %}
+
+{% block content %}
+<h1>Predictive Analysis</h1>
+<p>Here are all the predictive analysis with future forecasts:</p>
+{% for image in images %}
+    <h2>{{ image }}</h2>
+    <img src="/Output/{{ image }}" alt="{{ image }}">
+{% endfor %}
+
+
+
+{% endblock %}
+
+
